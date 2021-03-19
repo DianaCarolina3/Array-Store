@@ -1,0 +1,29 @@
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: unset;
+}
+.control-main {
+  width: 148px;
+  margin-left: 20px;
+  height: 900px;
+}
+
+.type ul {
+  padding: 45px;
+}
+.button {
+  height: 62px;
+}
+
+.btn-search {
+  margin-left: 10px;
+}
+
+.product-items {
+  display: flex;
+}
+.item {
+  width: 238px;
+  margin: 20px 15px;
+}

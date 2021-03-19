@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.control-main {
+  width: 100%;
+}

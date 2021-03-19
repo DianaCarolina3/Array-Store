@@ -8,6 +8,12 @@
   <title>Array Store</title>
   <link rel="icon" href="./images/baseline_storefront_white_18dp.png">
   <link rel="stylesheet" href="./src/css/styles.css">
+  <link rel="stylesheet" href="./src/css/beforeTablet.css" media="(min-width: 660px)">
+  <link rel="stylesheet" href="./src/css/tablet.css" media="(min-width: 768px)">
+  <link rel="stylesheet" href="./src/css/desktop.css" media="(min-width: 1023px)">
+
+
+
 </head>
 
 <body>
@@ -53,7 +59,7 @@
       </div>
       <div class="range">
         <div class="title__contain">
-          <p class="title">Price</p>
+          <p><a class="title" href="">Price</a></p>
         </div>
         <div class="range-contain">
           <input class="form-control" placeholder="0" type="number">
@@ -78,8 +84,8 @@
 
     <section class="products">
       <div class="product-search">
-        <p>9 Items found</p>
-        <div class="col-md-3">
+        <p class="ItemsP">9 Items found</p>
+        <div class="product-search-items col-md-3">
           <select class="form-select" id="validationCustom04" required>
             <option selected disabled value="">Choose...</option>
             <option>T-shirt</option>
@@ -87,22 +93,98 @@
             <option>Mugs</option>
           </select>
         </div>
-        <button>Search</button>
+        <button class="btn-search">Search</button>
       </div>
-      <div>
-        <div>
+      <div class="product-items">
+        <div class="item">
           <span class="badge bg-warning text-dark">New</span>
-          <img src="" alt="t-shirt">
-          <h3>Spacex t-shirt</h3>
-          <p>Product type: shirt</p>
-          <p>Color: black</p>
-          <p>Price: $22</p>
+          <img class="image-product" src="./images/spacex_black.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/spacex_blue.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/starman.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/spacex_mug_earth.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/spacex_mug_mars.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/spacex_mug_normal.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/cap_blue.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/cap_black.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
+          <button href="#" class="btn btn-block btn-primary">Show info</button>
+        </div>
+        <div class="item">
+          <span class="badge bg-warning text-dark">New</span>
+          <img class="image-product" src="./images/cap_blue.webp" alt="t-shirt">
+          <h3 class="h3">Spacex t-shirt</h3>
+          <p class="p">Product type: shirt</p>
+          <p class="p">Color: black</p>
+          <p class="p">Price: $22</p>
           <button href="#" class="btn btn-block btn-primary">Show info</button>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- CSS only -->
 </body>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 </html>
