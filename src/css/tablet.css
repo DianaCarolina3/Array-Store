@@ -1,3 +1,33 @@
+header {
+  padding-left: 40px;
+}
+header h1 {
+  width: 200px;
+  margin-left: 0;
+}
+.header-profile {
+  flex-direction: row;
+  margin-left: 0;
+}
+.header-profile img {
+  margin-right: 10px;
+}
+.profile-great {
+  margin-right: 10px;
+}
+.header-form {
+  width: 100%;
+  margin-left: 0;
+  justify-content: center;
+}
+.header-search {
+  width: 90%;
+}
+.header-button {
+  position: absolute;
+  margin-top: 1px;
+}
+
 main {
   display: flex;
   flex-wrap: nowrap;
@@ -5,8 +35,9 @@ main {
 }
 .control-main {
   width: 148px;
-  margin-left: 20px;
+  margin-left: 40px;
   height: 900px;
+  margin-top: 0;
 }
 
 .type ul {
@@ -20,8 +51,22 @@ main {
   margin-left: 10px;
 }
 
+.products {
+  margin: 0;
+}
+.product-search {
+  display: flex;
+  margin: 0 20px 0 20px;
+}
+.select-search {
+  justify-content: flex-end;
+  display: flex;
+  width: 80%;
+  padding-right: 20px;
+}
 .product-items {
   display: flex;
+  justify-content: center;
 }
 .item {
   width: 238px;

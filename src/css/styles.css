@@ -74,6 +74,9 @@ header h1 {
   border-bottom-left-radius: 0;
   border-top-right-radius: 5px;
 }
+.header-button:hover {
+  background: #0b5ed7;
+}
 .header-profile {
   display: flex;
   flex-direction: column;
@@ -176,6 +179,9 @@ header h1 {
   outline: none;
   cursor: pointer;
 }
+.button:hover {
+  background: #0b5ed7;
+}
 .green {
   background: #28a745;
 }
@@ -188,7 +194,7 @@ header h1 {
   justify-content: center;
 }
 .product-search {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   border-bottom: 1px solid var(--border);
   padding-bottom: 15px;
@@ -196,11 +202,12 @@ header h1 {
   max-width: 629px;
 }
 .ItemsP {
-  width: 300px;
+  display: flex;
+  width: 20%;
+  align-items: center;
+  margin: 0;
 }
-.product-search-items {
-  width: 392px;
-}
+
 .btn-search {
   width: 72px;
   height: 38px;
@@ -210,6 +217,9 @@ header h1 {
   border-style: none;
   outline: none;
   cursor: pointer;
+}
+.btn-search:hover {
+  background: #0b5ed7;
 }
 
 /* item */

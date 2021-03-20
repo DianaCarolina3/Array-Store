@@ -1,6 +1,29 @@
+header {
+  display: flex;
+}
+header h1 {
+  display: flex;
+  width: 250px;
+  align-items: center;
+}
+
+.container-header {
+  margin-right: 30px;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.header-profile {
+  flex-direction: column;
+}
 .control-main {
   min-width: 240px;
   height: 800px;
+}
+
+.btn-search {
+  position: relative;
+  right: 5px;
 }
 
 .product-search {
