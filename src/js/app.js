@@ -76,12 +76,14 @@ var getCap = arrayProducts.filter(function(products) {
   return products.price
 })
 
-// console.log(arrayProducts.length);
+console.log(arrayProducts);
 
-function getProducts() {
+//Show all products in screen
+function showProducts() {
   for (let index = 0; index < arrayProducts.length; index++) {
     let component = document.createElement("div");
     component.setAttribute("class", "item");
+    component.setAttribute("style","cursor:pointer")
     component.innerHTML = `
     <span class="badge bg-warning text-dark">New</span>
     <img class="image-product" src="${arrayProducts[index].image}" alt="${arrayProducts[index].name}">
@@ -89,42 +91,42 @@ function getProducts() {
     <p class="p">Product type: ${arrayProducts[index].product}</p>
     <p class="p">Color: ${arrayProducts[index].color}</p>
     <p class="p">Price: $${arrayProducts[index].price}</p>
-    <button onClick="infoProducts()" href="#" class="btn btn-block btn-primary button-info">Show info</button>
+    <button name="data-button-info" href="#" class="btn btn-block btn-primary">Show info</button>
     `
     document.getElementById('testing').appendChild(component)
+    infoModal(component, index, arrayProducts);
   }
+}
+showProducts()
 
-  let modal = document.getElementsByClassName('button-info')
-  modal.innerHTML = `
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+
+// MODAL All PRODUCTS=
+function infoModal(element, index, array) {
+  element.addEventListener('click', () => {
+    console.log('test: ', element, index);
+    console.log(`Product:  ${array[index].name}, ${array[index].product}, $${array[index].price}, ${array[index].color}`);
+    document.getElementById('showModal').innerHTML = `
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">${array[index].name}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="image-product" src="${array[index].image}" alt="${array[index].name}">
+          <h3 class="h3">${array[index].name}</h3>
+          <p class="p">Product type: ${array[index].product}</p>
+          <p class="p">Color: ${array[index].color}</p>
+          <p class="p">Price: $${array[index].price}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
+          <button type="button" class="btn btn-warning">Buy</button>
+        </div>
+        </div>
       </div>
     </div>
-  </div>
-  `
-  function eventModal() {
-    modal.forEach(button => {
-      button.addEventListener('click', () => {
-        // function(button.innerText)
-        alert(button.innerText)
-      })
-    })
-  }
-
+    `
+  })
 }
-
-getProducts()
-
-function infoProducts() {}
